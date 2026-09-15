@@ -10,6 +10,7 @@ import android.widget.Spinner
 import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
+import com.google.android.material.switchmaterial.SwitchMaterial
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -22,7 +23,7 @@ class SpinnerDateTimeActivity : AppCompatActivity() {
     private lateinit var timePicker: TimePickerDialog.OnTimeSetListener
     private lateinit var tglMasuk: TextView
     private lateinit var jam: TextView
-    private lateinit var swStatus: Switch
+    private lateinit var swStatus: SwitchMaterial
     private lateinit var btnProses: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,6 +46,15 @@ class SpinnerDateTimeActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, status, Toast.LENGTH_SHORT).show()
         }
 
+        swStatus.setOnCheckedChangeListener { _, isChecked  ->
+            if (isChecked) {
+                // Switch ON
+                println("Status Aktif")
+            } else {
+                // Switch OFF
+                println("Status Tidak Aktif")
+            }
+        }
     }
 
     override fun onStart() {
@@ -53,11 +63,13 @@ class SpinnerDateTimeActivity : AppCompatActivity() {
             "Teknologi Informasi",
             "Teknik Sipil", "Mesin", "Akuntansi", "Administrasi Bisnis"
         )
-        val adapterSpin = ArrayAdapter(this, R.layout.spin_style, listJurusan)
+        val adapterSpin = ArrayAdapter(this,
+            R.layout.spin_style, listJurusan)
         spinJurusan.adapter = adapterSpin
 
         tanggal()
         jam()
+
     }
 
     private fun tanggal() {
