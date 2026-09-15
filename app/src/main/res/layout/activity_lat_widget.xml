@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context=".widgets.LatWidgetActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minuman"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Meja"
+            android:id="@+id/LabelNama"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint= "Ex : 1 - 1000"
+            android:inputType="number"
+            android:id="@+id/etNoMeja"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Pelanggan"
+            android:textSize="20sp"
+            android:id="@+id/LabelNim"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:id="@+id/etNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint= "Ex = Rudy"
+            android:inputType="textPersonName"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Order"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTglOrder"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jam Order"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvJamOrder"
+           android:padding="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="List Minuman / Jumlah"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:stretchColumns="1"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jus Pokat @Rp 10.000"
+                    android:id="@+id/chkPokat"
+                    android:textSize="20sp"
+                    />
+                <EditText
+                    android:id="@+id/etjlhPokat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="1"
+                    android:inputType="number"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="10dp"
+                    />
+            </TableRow>
+
+            <TableRow>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jus Mangga @Rp 15.000"
+                    android:id="@+id/chkMangga"
+                    android:textSize="20sp"
+                    />
+                <EditText
+                    android:id="@+id/etJlhMangga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="1"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="10dp"
+                    />
+            </TableRow>
+
+            <TableRow>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jus Jeruk @Rp 8.000"
+                    android:id="@+id/chkJeruk"
+                    android:textSize="20sp"
+                    />
+                <EditText
+                    android:id="@+id/etJlJeruk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="1"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="10dp"
+                    />
+            </TableRow>
+
+            <TableRow>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Teh Panas @Rp.5.000"
+                    android:id="@+id/chkTeh"
+                    android:textSize="20sp"
+                    />
+                <EditText
+                    android:id="@+id/etJlTeh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="1"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="10dp"
+                    />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Pelanggan"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spPelanggan"
+            android:entries="@array/pelanggan"
+            android:singleLine="true"
+            android:padding="10dp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            android:id="@+id/btnSimpan"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hasil"
+            android:id="@+id/tvhasil"
+            />
+
+    </LinearLayout>
+</ScrollView>

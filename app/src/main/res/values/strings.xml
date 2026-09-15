@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Kotlin App 2026</string>
+    <string name="linear_btn1">Start</string>
+    <string name="linear_btn2">Pause</string>
+    <string name="linear_btn3">Stop</string>
+    <string-array name="pelanggan">
+        <item>Baru</item>
+        <item>Lama</item>
+    </string-array>
+    <string name="title_activity_maps">MapsActivity</string>
+</resources>

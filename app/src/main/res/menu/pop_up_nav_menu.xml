@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 1. Menu Item Tunggal -->
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_date"
+        android:title="Bagikan"
+        app:showAsAction="ifRoom" />
+
+    <!-- 2. Grup Menu (Mengelompokkan Item) -->
+    <group android:id="@+id/group_pengaturan">
+        <item
+            android:id="@+id/action_theme"
+            android:title="Ganti Tema" />
+        <item
+            android:id="@+id/action_language"
+            android:title="Bahasa" />
+    </group>
+
+    <!-- 3. Submenu (Menu di dalam Menu) -->
+    <item android:title="Lainnya">
+        <menu>
+            <item
+                android:id="@+id/action_help"
+                android:title="Bantuan" />
+        </menu>
+    </item>
+
+</menu>

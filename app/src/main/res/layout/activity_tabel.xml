@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:stretchColumns="1"
+    tools:context=".ui.TabelActivity">
+
+    <TableRow>
+            <TextView
+                android:id="@+id/tv1"
+                android:text="Nama Lengkap : "
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_column="0"
+                />
+
+            <EditText
+                android:id="@+id/etNama"
+                android:layout_column="1"
+                android:hint="Ex : Roni Putra"
+                />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/tv2"
+            android:text="NIM : "
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_column="0"
+            />
+        <EditText
+            android:id="@+id/etNim"
+            android:layout_column="1"
+            android:hint="Ex : 21223344"
+            />
+    </TableRow>
+
+    <TableRow>
+            <Button
+                android:id="@+id/btn1"
+                android:text="SUMPAN"
+                android:layout_span="2"
+                />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/btn4"
+            android:text="Login"
+            android:layout_span="2"
+
+            />
+    </TableRow>
+
+</TableLayout>
