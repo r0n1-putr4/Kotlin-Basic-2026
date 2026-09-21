@@ -91,12 +91,8 @@ class LatWidgetActivity : AppCompatActivity() {
                 else -> 0.0
             }
 
-
-
             for (i in harga.indices) {
-
                 if (checkboxes[i].isChecked) {
-
                     val jumlah = editTexts[i]
                         .text
                         .toString()
