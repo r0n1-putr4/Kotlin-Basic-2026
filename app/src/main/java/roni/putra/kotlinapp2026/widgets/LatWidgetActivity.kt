@@ -108,7 +108,8 @@ class LatWidgetActivity : AppCompatActivity() {
 
             val totalBayar = total - totalDis - potongan
 
-            val hasil = "$pilMenu\nDiskon : Rp $totalDis\nPotongan : Rp $potongan\nTotal: Rp $totalBayar\n"
+            val hasil =
+                "$pilMenu\nDiskon : Rp $totalDis\nPotongan : Rp $potongan\nTotal: Rp $totalBayar\n"
 
             tvhasil.text = hasil
 
