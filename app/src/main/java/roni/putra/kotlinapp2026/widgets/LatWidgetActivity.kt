@@ -96,7 +96,7 @@ class LatWidgetActivity : AppCompatActivity() {
                     val jumlah = editTexts[i]
                         .text
                         .toString()
-                        .toIntOrNull() ?: 0
+                        .toIntOrNull() ?: 1
 
                     pilMenu = pilMenu + "\n" + checkboxes[i].text + " x " + jumlah
                     total += harga[i] * jumlah
