@@ -43,7 +43,7 @@ class SpinnerDateTimeActivity : AppCompatActivity() {
         }
 
         btnProses.setOnClickListener {
-            Toast.makeText(applicationContext, status, Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, spinJurusan.selectedItem.toString() , Toast.LENGTH_SHORT).show()
         }
 
         swStatus.setOnCheckedChangeListener { _, isChecked  ->
@@ -66,6 +66,9 @@ class SpinnerDateTimeActivity : AppCompatActivity() {
         val adapterSpin = ArrayAdapter(this,
             R.layout.spin_style, listJurusan)
         spinJurusan.adapter = adapterSpin
+//        val jurusanPil = "Mesin"
+//        val posisi = listJurusan.indexOf(jurusanPil)
+//        spinJurusan.setSelection(posisi)
 
         tanggal()
         jam()

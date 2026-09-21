@@ -83,6 +83,14 @@ class LatWidgetActivity : AppCompatActivity() {
         //Paling fungsi proses
         btnSimpan.setOnClickListener {
             var pilMenu = ""
+            val  pelanggan = pelanggan.selectedItem
+
+            val dis = when (pelanggan) {
+                "vip" -> 0.1
+                "member" -> 0.05
+                else -> 0.0
+            }
+
             for (i in harga.indices) {
 
                 if (checkboxes[i].isChecked) {
@@ -98,7 +106,10 @@ class LatWidgetActivity : AppCompatActivity() {
                 }
             }
 
-            tvhasil.text = "$pilMenu\n Total: Rp %,d".format(total)
+            val totalDis = total * dis
+            val totalBayar = total - totalDis
+
+            tvhasil.text = "$pilMenu\n Total: Rp %,d".format(totalBayar)
         }
 
     }

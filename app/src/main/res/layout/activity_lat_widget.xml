@@ -193,6 +193,7 @@
             android:id="@+id/spPelanggan"
             android:entries="@array/pelanggan"
             android:singleLine="true"
+            android:textSize="20sp"
             android:padding="10dp"
             />
 
