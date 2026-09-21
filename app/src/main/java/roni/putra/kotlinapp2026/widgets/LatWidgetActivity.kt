@@ -83,13 +83,15 @@ class LatWidgetActivity : AppCompatActivity() {
         //Paling fungsi proses
         btnSimpan.setOnClickListener {
             var pilMenu = ""
-            val  pelanggan = pelanggan.selectedItem
+            val pelanggan = pelanggan.selectedItem
 
             val dis = when (pelanggan) {
                 "vip" -> 0.1
                 "member" -> 0.05
                 else -> 0.0
             }
+
+
 
             for (i in harga.indices) {
 
@@ -100,16 +102,18 @@ class LatWidgetActivity : AppCompatActivity() {
                         .toString()
                         .toIntOrNull() ?: 0
 
-
                     pilMenu = pilMenu + "\n" + checkboxes[i].text + " x " + jumlah
                     total += harga[i] * jumlah
                 }
             }
 
+            val potongan = if (total >= 100_000) 1000 else 0
             val totalDis = total * dis
-            val totalBayar = total - totalDis
 
-            tvhasil.text = "$pilMenu\n Total: Rp %,d".format(totalBayar)
+            val totalBayar = total - totalDis - potongan
+
+            tvhasil.text =
+                "$pilMenu\nDiskon : Rp $totalDis\nPotongan : Rp $potongan\nTotal: Rp $totalBayar\n"
         }
 
     }

@@ -4,8 +4,9 @@
     <string name="linear_btn2">Pause</string>
     <string name="linear_btn3">Stop</string>
     <string-array name="pelanggan">
-        <item>Baru</item>
-        <item>Lama</item>
+        <item>vip</item>
+        <item>member</item>
+        <item>baru</item>
     </string-array>
     <string name="title_activity_maps">MapsActivity</string>
 </resources>

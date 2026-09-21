@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinApp2026">
         <activity
-            android:name=".widgets.SpinnerDateTimeActivity"
+            android:name=".widgets.LatWidgetActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
