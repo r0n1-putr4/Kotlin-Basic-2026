@@ -43,5 +43,6 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
 
-
+    //image picker
+    implementation("com.github.Dhaval2404:ImagePicker:2.1")
 }
