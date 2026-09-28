@@ -37,13 +37,20 @@ class RecLinearActivity : AppCompatActivity() {
                 "Jakarta"
             ),
             LaptopModel(
-                R.drawable.img,
+                R.drawable.laptop_1,
                 "Lenovo Thinkpad",
                 "Rp. 50.000",
                 4.5,
                 "Jakarta"
             )
         )
-        recLaptop.adapter = LaptopAdapter(laptopList)
+        recLaptop.adapter = LaptopAdapter(
+            laptopList,
+            object : LaptopAdapter.OnAdapterListener {
+                override fun onClick(laptopModel: LaptopModel) {
+                    val bundle = Bundle()
+                    bundle.putDouble("rating", laptopModel.rating)
+                }
+            })
     }
 }

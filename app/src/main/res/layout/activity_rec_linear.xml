@@ -3,19 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".rec.RecLinearActivity">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recLaptop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recLaptop"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"
-        tools:listitem="@layout/produk_style"
-        />
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/produk_style" />
 
 
 </LinearLayout>

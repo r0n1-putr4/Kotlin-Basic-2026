@@ -10,7 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import roni.putra.kotlinapp2026.R
 
 class LaptopAdapter(
-    private val laptopList: List<LaptopModel>
+    private val laptopList: List<LaptopModel>,
+    private val listener: OnAdapterListener
 ) : RecyclerView.Adapter<LaptopAdapter.ViewProduk>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -42,5 +43,10 @@ class LaptopAdapter(
         val tvLokasi = view.findViewById<TextView>(R.id.tvLokasi)
 
     }
+
+    interface OnAdapterListener {
+        fun onClick(laptopModel: LaptopModel)
+    }
+
 
 }
