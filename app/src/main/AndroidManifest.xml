@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinApp2026">
         <activity
-            android:name=".MainActivity"
+            android:name=".rec.RecLinearActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -23,10 +23,6 @@
         </activity>
         <activity
             android:name=".menu.PopUpMenuActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".rec.RecLinearActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

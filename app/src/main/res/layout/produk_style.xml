@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp">
+    android:layout_margin="5dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -25,23 +25,26 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tvNamaProduk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:text="Nama Produk" />
 
             <TextView
+                android:id="@+id/tvHarga"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:text="Rp. 50.000" />
 
             <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/rating"
                 style="?android:attr/ratingBarStyleSmall"
                 android:layout_width="wrap_content"
-                android:rating="1"
+                android:layout_height="wrap_content"
                 android:progressTint="#FFEB3B"
-                android:layout_height="wrap_content" />
+                android:rating="1" />
 
         </LinearLayout>
 
@@ -52,18 +55,20 @@
             android:layout_alignParentEnd="true">
 
             <ImageView
+                android:id="@+id/ic_"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="TODO"
                 android:src="@drawable/ic_location"
-                android:id="@+id/ic_"
                 app:tint="#2196F3" />
+
             <TextView
+                android:id="@+id/tvLokasi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Alamat AlamatAlamat"
-                android:layout_toEndOf="@id/ic_"
                 android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/ic_"
+                android:text="Alamat AlamatAlamat"
                 android:textSize="12sp"
 
                 />
