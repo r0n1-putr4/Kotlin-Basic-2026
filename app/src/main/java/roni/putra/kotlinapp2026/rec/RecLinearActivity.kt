@@ -31,7 +31,7 @@ class RecLinearActivity : AppCompatActivity() {
         val laptopList = listOf<LaptopModel>(
             LaptopModel(
                 R.drawable.img,
-                "Lenovo Thinkpad",
+                "Acer Aspire Lite 14 AL14-45P-R1QH AMD Ryzen 3 5400 8GB 512GB Windows 11+Office 14.0 WUXGA IPS",
                 "Rp. 50.000",
                 4.5,
                 "Jakarta"

@@ -31,6 +31,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
+                android:ellipsize="end"
+                android:textStyle="bold"
                 android:text="Nama Produk" />
 
             <TextView
@@ -38,6 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
+                android:textColor="#e63e3e"
                 android:text="Rp. 50.000" />
 
             <androidx.appcompat.widget.AppCompatRatingBar
