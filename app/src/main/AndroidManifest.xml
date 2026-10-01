@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinApp2026">
         <activity
-            android:name=".rec.RecLinearActivity"
+            android:name=".intent.BayarActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -25,11 +25,7 @@
             android:name=".menu.PopUpMenuActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".intent.BayarActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
+       <activity
             android:name=".intent.HasilActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />

@@ -1,5 +1,6 @@
 package roni.putra.kotlinapp2026.intent
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -19,6 +20,15 @@ class BayarActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        btnNilai = findViewById(R.id.btnProses)
+        btnNilai = findViewById(R.id.btnNilai)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        btnNilai.setOnClickListener {
+            startActivity(Intent(this,
+                HasilActivity::class.java).putExtra("nama","Roni Putra")
+            )
+        }
     }
 }
