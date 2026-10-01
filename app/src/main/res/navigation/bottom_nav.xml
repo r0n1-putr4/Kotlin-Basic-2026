@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:id="@+id/bottom_nav">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav"
+    app:startDestination="@id/recLinearActivity">
+    <activity
+        android:id="@+id/recLinearActivity"
+        android:name="roni.putra.kotlinapp2026.rec.RecLinearActivity"
+        android:label="activity_rec_linear"
+        tools:layout="@layout/activity_rec_linear" />
+    <activity
+        android:id="@+id/latWidgetActivity"
+        android:name="roni.putra.kotlinapp2026.widgets.LatWidgetActivity"
+        android:label="activity_lat_widget"
+        tools:layout="@layout/activity_lat_widget" />
 </navigation>

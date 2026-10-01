@@ -7,11 +7,15 @@
     android:layout_height="match_parent">
 
     <!-- Area Wadah Fragment/Halaman -->
-    <FrameLayout
-        android:id="@+id/fragment_container"
+    <androidx.fragment.app.FragmentContainerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bottom_navigation" />
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/bottom_nav" />
 
     <!-- Komponen Bottom Navigation View -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
