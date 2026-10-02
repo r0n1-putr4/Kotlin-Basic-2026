@@ -1,5 +1,6 @@
 package roni.putra.kotlinapp2026.rec
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,7 @@ import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import roni.putra.kotlinapp2026.MainActivity
 import roni.putra.kotlinapp2026.R
 
 class LaptopAdapter(
@@ -19,8 +21,10 @@ class LaptopAdapter(
     ): ViewProduk {
         return ViewProduk(
             LayoutInflater.from(parent.context)
-                .inflate(R.layout.produk_style,
-                    parent, false)
+                .inflate(
+                    R.layout.produk_style,
+                    parent, false
+                )
         )
     }
 
@@ -31,6 +35,16 @@ class LaptopAdapter(
         holder.tvHarga.text = laptop.harga
         holder.tvRating.rating = laptop.rating.toFloat()
         holder.tvLokasi.text = laptop.lokasi
+
+        holder.itemView.setOnClickListener {
+            holder.itemView.context.startActivity(
+                Intent(
+                    holder.itemView.context,
+                    MainActivity::class.java
+                ).putExtra("rating", laptop.rating)
+                    .putExtra("gambar", laptop.gambar)
+            )
+        }
     }
 
     override fun getItemCount(): Int = laptopList.size

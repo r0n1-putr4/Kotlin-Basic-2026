@@ -7,11 +7,13 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.github.dhaval2404.imagepicker.ImagePicker
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     private lateinit var imgFoto: ImageView
@@ -30,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         imgFoto = findViewById(R.id.imgFoto)
         btnPilihFoto = findViewById(R.id.btnPilihFoto)
 
+        imgFoto.setImageResource(intent.getIntExtra("gambar",0))
         btnPilihFoto.setOnClickListener {
             ImagePicker.with(this)
                 .crop()
@@ -37,6 +40,9 @@ class MainActivity : AppCompatActivity() {
                 .start()
 
         }
+
+       val tvRating = findViewById<TextView>(R.id.tvRating)
+        tvRating.text = "Rating : ${intent.getDoubleExtra("rating",0.0)}"
     }
 
     override fun onActivityResult(
