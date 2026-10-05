@@ -5,10 +5,7 @@
     <!-- Izin Akses -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
-        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
-
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -20,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinApp2026">
         <activity
-            android:name=".map.MapsActivity"
+            android:name=".api.MealActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -55,7 +52,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBz9Q9bYDI5wWOaK51m3CnHKaKvnNDLG_Y" />
-
 
     </application>
 
