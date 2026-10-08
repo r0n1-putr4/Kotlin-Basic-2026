@@ -97,6 +97,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_hos))
             )
 
+//            menyimpan data
             marker?.tag = data
 
         }
