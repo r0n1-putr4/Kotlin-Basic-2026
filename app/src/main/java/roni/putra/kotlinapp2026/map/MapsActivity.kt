@@ -19,7 +19,6 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import roni.putra.kotlinapp2026.R
 import roni.putra.kotlinapp2026.databinding.ActivityMapsBinding
@@ -77,32 +76,41 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 100.3603608,
                 "Basko",
                 "Mall terbesar di Kota Padang",
-                R.drawable.ic_hostpital
+                R.drawable.img_meal
             ),
             ModelLatLng(
                 -0.9019383839220829,
                 100.3508682099663,
                 "Gubernur",
                 "Mall terbesar di Kota Padang",
-                R.drawable.ic_hostpital
+                R.drawable.img_meal
             )
         )
         val padang = LatLng(-0.93742627, 100.3603608)
 
 
-        listLatLng.forEach {
-            mMap.addMarker(
+        listLatLng.forEach { data ->
+            val marker = mMap.addMarker(
                 MarkerOptions()
-                    .position(LatLng(it.Lat, it.Lng))
-                    .title(it.Title).snippet(it.Snippet)
-
-                    .icon(BitmapDescriptorFactory.fromResource(it.icon))
+                    .position(LatLng(data.Lat, data.Lng))
+                    .title(data.Title).snippet(data.Snippet)
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_hos))
             )
 
-            mMap.setOnMarkerClickListener { marker ->
-                tampilkanInfo(marker)
-                true  // supaya map tidak auto zoom
+            marker?.tag = data
+
+        }
+        mMap.setOnMarkerClickListener { marker ->
+
+            val data = marker.tag as? ModelLatLng
+
+            if (data != null) {
+                tampilkanInfo(data)
             }
+
+            // true = jangan tampilkan InfoWindow bawaan Google Maps
+            // dan jangan melakukan animasi kamera otomatis
+            true
         }
         mMap.setOnMapClickListener {
 
@@ -111,11 +119,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(padang, 12f))
     }
 
-    private fun tampilkanInfo(marker: Marker) {
+    private fun tampilkanInfo(modelLatLng: ModelLatLng) {
 
-        tvNama.text = marker.title
+        tvNama.text = modelLatLng.Title
 
-        tvAlamat.text = marker.title
+        tvAlamat.text = modelLatLng.Snippet
+
+
+        imgRumah.setImageResource(modelLatLng.icon)
 
         tvRating.text =
             "⭐ 4.3"
