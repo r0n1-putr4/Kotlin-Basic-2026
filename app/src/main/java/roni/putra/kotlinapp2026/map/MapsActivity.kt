@@ -19,6 +19,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MapStyleOptions
 import com.google.android.gms.maps.model.MarkerOptions
 import roni.putra.kotlinapp2026.R
 import roni.putra.kotlinapp2026.databinding.ActivityMapsBinding
@@ -76,7 +77,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 100.3603608,
                 "Basko",
                 "Mall terbesar di Kota Padang",
-                R.drawable.img_meal
+                R.drawable.img
             ),
             ModelLatLng(
                 -0.9019383839220829,
@@ -87,6 +88,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             )
         )
         val padang = LatLng(-0.93742627, 100.3603608)
+
 
 
         listLatLng.forEach { data ->
@@ -170,5 +172,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 myLocation()
             }
         }
+    }
+
+    private fun setCustomMapStyle(mapStyle: Int) {
+        mMap.setMapStyle(
+            MapStyleOptions.loadRawResourceStyle(this, mapStyle)
+        )
     }
 }
