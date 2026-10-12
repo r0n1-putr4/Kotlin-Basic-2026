@@ -89,20 +89,32 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         )
         val padang = LatLng(-0.93742627, 100.3603608)
 
-
-
-        listLatLng.forEach { data ->
+        for (i in listLatLng){
             val marker = mMap.addMarker(
                 MarkerOptions()
-                    .position(LatLng(data.Lat, data.Lng))
-                    .title(data.Title).snippet(data.Snippet)
+                    .position(LatLng(i.Lat, i.Lng))
+                    .title(i.Title)
+                    .snippet(i.Snippet)
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_hos))
             )
 
-//            menyimpan data
-            marker?.tag = data
-
+            // Menyimpan data ke marker
+            marker?.tag = i
         }
+
+
+//        listLatLng.forEach { data ->
+//            val marker = mMap.addMarker(
+//                MarkerOptions()
+//                    .position(LatLng(data.Lat, data.Lng))
+//                    .title(data.Title).snippet(data.Snippet)
+//                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_hos))
+//            )
+//
+////            menyimpan data
+//            marker?.tag = data
+//
+//        }
         mMap.setOnMarkerClickListener { marker ->
 
             val data = marker.tag as? ModelLatLng
