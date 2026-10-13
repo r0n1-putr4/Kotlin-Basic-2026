@@ -57,6 +57,11 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
 
+        <activity
+            android:name=".map.CustomeMapActivity"
+            android:exported="false"
+            android:label="@string/title_activity_custome_map"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

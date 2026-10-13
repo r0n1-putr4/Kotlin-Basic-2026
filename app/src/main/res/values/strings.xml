@@ -9,4 +9,5 @@
         <item>baru</item>
     </string-array>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_custome_map">CustomeMapActivity</string>
 </resources>
