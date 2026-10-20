@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.core.app.ActivityCompat
@@ -38,6 +39,11 @@ class CustomeMapActivity : AppCompatActivity(), OnMapReadyCallback {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
@@ -118,6 +124,11 @@ class CustomeMapActivity : AppCompatActivity(), OnMapReadyCallback {
 
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(titikTengah, 13f))
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_map, menu)
+        return super.onCreateOptionsMenu(menu)
     }
 
     fun showCafe(cafeModel: CafeModel) {

@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinApp2026">
         <activity
-            android:name=".map.MapsActivity"
+            android:name=".map.CustomeMapActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -58,9 +58,8 @@
             android:required="false" />
 
         <activity
-            android:name=".map.CustomeMapActivity"
+            android:name=".api.DetailMealActivity"
             android:exported="false"
-            android:label="@string/title_activity_custome_map"
             android:windowSoftInputMode="adjustResize" />
     </application>
 

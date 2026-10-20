@@ -13,7 +13,8 @@ object ApiClient {
     private fun interceptor(): OkHttpClient {
         val interceptor = HttpLoggingInterceptor()
         interceptor.level = HttpLoggingInterceptor.Level.BODY
-        return OkHttpClient.Builder().addInterceptor(interceptor).build()
+        return OkHttpClient.Builder()
+            .addInterceptor(interceptor).build()
     }
 
     val apiService: ApiService by lazy {
